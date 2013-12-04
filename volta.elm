@@ -14,4 +14,4 @@ resistor = croppedImage (20,120) 50 40 "icons.svg"
 
 scene (w,h) circuit = collage w h [circuit,  display, resistor]
 
-main = scene <~ Window.dimensions ~ (lift circuit (foldp (+) 0 (fps 40)))
+main = scene <~ Window.dimensions ~ (circuit <~ (foldp (+) 0 (fps 40)))
