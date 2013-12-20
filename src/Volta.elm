@@ -1,4 +1,4 @@
-module Main where
+module Volta where
 
 import Window
 import Sprites
