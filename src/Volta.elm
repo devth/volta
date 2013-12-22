@@ -10,7 +10,7 @@ background w h = tiledImage w h "grid.svg" |> toForm
 
 wire = outlined (solid Colors.wire) (ngon 4 250) |> move (0, 0) |> rotate (degrees 45)
 
-circuit r = wire |> rotate (degrees (r / 20))
+circuit r = wire -- |> rotate (degrees (r / 20))
 
 vir = map plainText ["120 V", "15 A", "6 Ω"]
 
