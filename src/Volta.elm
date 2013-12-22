@@ -4,10 +4,11 @@ import Window
 import Sprites
 import Logo
 import Tools
+import Colors
 
 background w h = tiledImage w h "grid.svg" |> toForm
 
-wire = outlined (solid black) (ngon 4 250) |> move (0, 0) |> rotate (degrees 45)
+wire = outlined (solid Colors.wire) (ngon 4 250) |> move (0, 0) |> rotate (degrees 45)
 
 circuit r = wire |> rotate (degrees (r / 20))
 
