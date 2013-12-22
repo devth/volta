@@ -1,8 +1,11 @@
 module Tools where
 
 import Colors
+import Dimensions (gridSize)
 
-box = outlined (solid Colors.toolbox) (rect 50 50) |> move (25, 0)
+boxSize = gridSize - 2
+
+box = outlined (solid Colors.toolbox) (rect boxSize boxSize) |> move (25, 0)
 
 boxed : Form -> Element
 boxed f = collage 100 50 [f, box]
