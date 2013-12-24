@@ -1,14 +1,12 @@
 module Model where
 
-data Component = Wire | Resistor | Battery
+data ComponentType = Wire | Resistor | Battery
 
 type Segment = { x1:Int, y1:Int, x2:Int, y2:Int }
 
-type PlacedComponent = { pos:Segment, component: Component, id:Int }
+type Component = { pos:Segment, component: ComponentType, id:Int }
 
-type VoltaState = { components: [PlacedComponent] }
+type VoltaState = { components: [Component], uid:Int }
 
 initialState : VoltaState
-initialState = { components=[] }
-
-data Action = Add PlacedComponent | Remove
+initialState = { components=[], uid=0 }
