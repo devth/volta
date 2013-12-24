@@ -7,7 +7,7 @@ import Logo
 import Tools
 import Colors
 
-background w h = tiledImage w h "grid.svg" |> toForm
+background w h = tiledImage w h "img/grid.svg" |> toForm
 
 vir = map plainText ["120 V", "15 A", "6 Ω"]
 display = flow down vir |> toForm |> move (-200,200)

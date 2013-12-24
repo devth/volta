@@ -1,6 +1,6 @@
 module Sprites where
 
-spritePath = "icons.svg"
+spritePath = "img/icons.svg"
 
 mkSprite x y = croppedImage (x,y) 55 40 spritePath
              |> toForm
