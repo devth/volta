@@ -1,6 +1,6 @@
 module Volta where
 
-import Render
+import Render (render)
 import Model (VoltaState, initialState)
 import Update (update)
 import Input (input)
@@ -8,4 +8,4 @@ import Input (input)
 currentState : Signal VoltaState
 currentState = foldp update initialState input
 
-main = lift asText currentState
+main = render currentState
